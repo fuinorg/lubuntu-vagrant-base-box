@@ -1,0 +1,8 @@
+.DS_Store
+packer_cache/
+output/
+archive/
+*.box
+*.hwm
+*.pwd
+*.pwi

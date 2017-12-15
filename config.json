@@ -1,0 +1,152 @@
+{
+  "variables": {
+    "vm_name": "Lubuntu-17.10-amd64-core",
+    "iso_name": "lubuntu-17.10-alternate-amd64.iso",
+    "iso_checksum": "4accd1578ae0e46a2bdc64839f3edb0a",
+    "iso_checksum_type": "md5",
+    "ssh_name": "vagrant",
+    "ssh_pass": "vagrant",
+    "box_version": "1710.0.20171020",
+    "virtualbox_version": "5.1.6",
+    "disk_size": "40960",
+    "mem_size": "1024",
+    "num_cpus": "2",
+    "linux": "/install/vmlinuz",
+    "initrd": "/install/initrd.gz",
+    "preseed": "preseed.cfg",
+    "headless": "true",
+    "cloud_token": "",
+    "cloud_version": "0.1.3",
+    "cloud_tag": "fuin/"lubuntu-17.10-alternate-amd64"
+  },
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "boot_wait": "10s",
+      "headless": "{{user `headless`}}",
+      "disk_size": "{{user `disk_size`}}",
+      "guest_os_type": "Ubuntu_64",
+      "guest_additions_mode": "disable",
+      "name": "virtualbox-build",
+      "vm_name": "{{user `vm_name`}}-virtualbox",
+      "virtualbox_version_file": ".vbox_version",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_checksum_type": "{{user `iso_checksum_type`}}",
+      "iso_urls": [
+        "http://cdimages.ubuntu.com/lubuntu/releases/artful/release/{{user `iso_name`}}"
+      ],
+      "vboxmanage": [
+        [ "modifyvm", "{{.Name}}", "--rtcuseutc", "on" ],
+        [ "modifyvm", "{{.Name}}", "--cpus", "{{user `num_cpus`}}" ],
+        [ "modifyvm", "{{.Name}}", "--memory", "{{user `mem_size`}}" ],
+        [ "modifyvm", "{{.Name}}", "--vram", "16" ]
+      ],
+      "ssh_username": "{{user `ssh_name`}}",
+      "ssh_password": "{{user `ssh_pass`}}",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "floppy_files": [
+        "files/{{user `preseed`}}"
+      ],
+      "boot_command": [
+        "<esc><f6><esc>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs>",
+        "{{user `linux`}} noapic preseed/file=/media/{{user `preseed`}} ",
+        "debian-installer=en_US auto=true country=US language=EN locale=en_US kbd-chooser/method=us ",
+        "console-setup/ask_detect=false keyboard-configuration/layoutcode=us ",
+        "hostname=vagrant ",
+        "initrd={{user `initrd`}} quiet --- <enter>"
+      ],
+      "shutdown_command": "echo {{user `ssh_pass`}} | sudo -S shutdown -P now",
+      "output_directory": "output/{{user `vm_name`}}-v{{user `box_version`}}-{{timestamp}}"
+    },
+    {
+      "type": "vmware-iso",
+      "boot_wait": "10s",
+      "headless": "{{user `headless`}}",
+      "guest_os_type": "ubuntu-64",
+      "name": "vmware-build",
+      "vm_name": "{{user `vm_name`}}-vmware",
+      "tools_upload_flavor": "linux",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_checksum_type": "{{user `iso_checksum_type`}}",
+      "iso_urls": [
+        "http://cdimages.ubuntu.com/lubuntu/releases/artful/release/{{user `iso_name`}}"
+      ],
+      "disk_type_id": "0",
+      "ssh_username": "{{user `ssh_name`}}",
+      "ssh_password": "{{user `ssh_pass`}}",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "floppy_files": [
+        "files/{{user `preseed`}}"
+      ],
+      "boot_command": [
+        "<enter><wait><f6><esc>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs>",
+        "{{user `linux`}} noapic preseed/file=/media/{{user `preseed`}} ",
+        "debian-installer=en_US auto=true country=US language=EN locale=en_US kbd-chooser/method=us ",
+        "console-setup/ask_detect=false keyboard-configuration/layoutcode=us ",
+        "hostname=vagrant ",
+        "initrd={{user `initrd`}} quiet --- <enter>"
+      ],
+      "shutdown_command": "echo {{user `ssh_pass`}} | sudo -S shutdown -P now",
+      "output_directory": "output/{{user `vm_name`}}-v{{user `box_version`}}-{{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
+      "script": "scripts/privileged_tasks.sh",
+      "pause_before": "10s"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/vagrant_ssh.sh",
+      "pause_before": "10s"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
+      "script": "scripts/cleanup.sh",
+      "pause_before": "10s"
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "vagrant",
+        "compression_level": 9,
+        "output": "archive/{{user `vm_name`}}-v{{user `box_version`}}-{{timestamp}}-virtualbox.box",
+        "override": {
+          "vmware": {
+            "output": "archive/{{user `vm_name`}}-v{{user `box_version`}}-{{timestamp}}-vmware.box"
+          }
+        }
+      },
+      {
+        "type": "vagrant-cloud",
+        "box_tag": "{{user `cloud_tag`}}",
+        "access_token": "{{user `cloud_token`}}",
+        "version": "{{user `cloud_version`}}"
+      }
+    ]
+  ]
+}
