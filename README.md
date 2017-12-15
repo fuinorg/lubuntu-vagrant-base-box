@@ -44,4 +44,4 @@ packer build \
 
 ## Credits
 Many thanks to [Aaron](https://github.com/slapula/) who created this [Packer](https://www.packer.io/) script.
-
+You can hire him as a freelancer at [upwork.com](https://www.upwork.com/o/profiles/users/_~01d7141121116c4a6e/).
