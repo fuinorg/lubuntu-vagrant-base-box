@@ -41,3 +41,7 @@ packer build \
    -only vmware-build
    config.json
 ```
+
+## Credits
+Many thanks to [Aaron](https://github.com/slapula/) who created this [Packer](https://www.packer.io/) script.
+
