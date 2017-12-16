@@ -119,6 +119,13 @@
     },
     {
       "type": "shell",
+      "only": ["vmware-build"],
+      "execute_command": "echo 'vagrant' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
+      "script": "scripts/open-vm-tools.sh",
+      "pause_before": "10s"
+    },
+    {
+      "type": "shell",
       "script": "scripts/vagrant_ssh.sh",
       "pause_before": "10s"
     },
