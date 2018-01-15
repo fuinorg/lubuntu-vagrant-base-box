@@ -2,7 +2,7 @@
   "variables": {
     "vm_name": "Lubuntu-17.10.1-amd64-core",
     "iso_name": "lubuntu-17.10.1-alternate-amd64.iso",
-    "iso_checksum": "4accd1578ae0e46a2bdc64839f3edb0a",
+    "iso_checksum": "c682b611cd13e7d2fed5f8972892e395",
     "iso_checksum_type": "md5",
     "ssh_name": "vagrant",
     "ssh_pass": "vagrant",
