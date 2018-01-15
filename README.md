@@ -3,7 +3,7 @@ Packer script that creates a Lubuntu alternate Vagrant base box.
 
 # Download
 You can download the pre-built base boxes here:
-https://app.vagrantup.com/fuin/boxes/lubuntu-17.10-alternate-amd64/
+https://app.vagrantup.com/fuin/boxes/lubuntu-17.10.1-alternate-amd64/
 
 # Build
 You can easily build the base box on your local PC (bare metal).
@@ -27,7 +27,7 @@ To build a virtualbox base box:
 packer build \
    -var 'cloud_token=XXXXXXXXXXXXXXXXX' \
    -var 'cloud_version=0.1.2' \
-   -var 'cloud_tag=youraccount/lubuntu-17.10-alternate-amd64' \
+   -var 'cloud_tag=youraccount/lubuntu-17.10.1-alternate-amd64' \
    -only virtualbox-build
    config.json
 ```
@@ -37,7 +37,7 @@ To build a vmware base box:
 packer build \
    -var 'cloud_token=XXXXXXXXXXXXXXXXX' \
    -var 'cloud_version=0.1.2' \
-   -var 'cloud_tag=youraccount/lubuntu-17.10-alternate-amd64' \
+   -var 'cloud_tag=youraccount/lubuntu-17.10.1-alternate-amd64' \
    -only vmware-build
    config.json
 ```
