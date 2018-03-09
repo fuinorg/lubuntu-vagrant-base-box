@@ -37,7 +37,7 @@ To build a vmware base box:
 packer build \
    -var 'cloud_token=XXXXXXXXXXXXXXXXX' \
    -var 'cloud_version=0.1.2' \
-   -var 'cloud_tag=youraccount/lubuntu-17.10.1-alternate-amd64' \
+   -var 'cloud_tag=youraccount/lubuntu-17.10-alternate-amd64' \
    -only vmware-build
    config.json
 ```
