@@ -16,7 +16,7 @@
     "preseed": "preseed.cfg",
     "headless": "true",
     "cloud_token": "",
-    "cloud_version": "0.1.6",
+    "cloud_version": "0.1.7",
     "cloud_tag": "fuin/lubuntu-17.10-alternate-amd64"
   },
   "builders": [
