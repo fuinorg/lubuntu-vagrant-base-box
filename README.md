@@ -1,6 +1,7 @@
 # lubuntu-vagrant-base-box
 Packer script that creates a Lubuntu alternate Vagrant base box.
 
+[![Build Status](https://fuin-org.ci.cloudbees.com/job/lubuntu-vagrant-base-box/badge/icon)](https://fuin-org.ci.cloudbees.com/job/lubuntu-vagrant-base-box/)
 [![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 # Download
