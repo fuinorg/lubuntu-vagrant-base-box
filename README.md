@@ -1,7 +1,7 @@
 # lubuntu-vagrant-base-box
 Packer script that creates a Lubuntu alternate Vagrant base box.
 
-[![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.de.html)
+[![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 # Download
 You can download the pre-built base boxes here:
