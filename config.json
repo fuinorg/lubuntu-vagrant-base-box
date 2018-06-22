@@ -7,7 +7,7 @@
     "iso_checksum_type": "md5",
     "box_version": "1710.1.20180108",                    
     "cloud_tag": "fuin/lubuntu-17.10-alternate-amd64",
-    "cloud_version": "0.1.7",
+    "cloud_version": "1.0.0",
     "cloud_token": "",
     "ssh_name": "vagrant",
     "ssh_pass": "vagrant",
