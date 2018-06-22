@@ -1,5 +1,6 @@
 {
   "variables": {
+    "release": "artful",
     "vm_name": "Lubuntu-17.10.1-amd64-core",
     "iso_name": "lubuntu-17.10.1-alternate-amd64.iso",
     "iso_checksum": "c682b611cd13e7d2fed5f8972892e395",
@@ -33,7 +34,7 @@
       "iso_checksum": "{{user `iso_checksum`}}",
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_urls": [
-        "http://cdimages.ubuntu.com/lubuntu/releases/artful/release/{{user `iso_name`}}"
+        "http://cdimages.ubuntu.com/lubuntu/releases/{{user `release`}}/release/{{user `iso_name`}}"
       ],
       "vboxmanage": [
         [ "modifyvm", "{{.Name}}", "--rtcuseutc", "on" ],
@@ -79,7 +80,7 @@
       "iso_checksum": "{{user `iso_checksum`}}",
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_urls": [
-        "http://cdimages.ubuntu.com/lubuntu/releases/artful/release/{{user `iso_name`}}"
+        "http://cdimages.ubuntu.com/lubuntu/releases/{{user `release`}}/release/{{user `iso_name`}}"
       ],
       "disk_type_id": "0",
       "ssh_username": "{{user `ssh_name`}}",
