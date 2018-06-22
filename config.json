@@ -9,6 +9,8 @@
     "cloud_tag": "fuin/lubuntu-17.10-alternate-amd64",
     "cloud_version": "1.0.0",
     "cloud_token": "",
+    "cloud_version_description": "Updated packages",
+    "cloud_no_release": "true",
     "ssh_name": "vagrant",
     "ssh_pass": "vagrant",
     "virtualbox_version": "5.1.6",
@@ -153,7 +155,9 @@
         "type": "vagrant-cloud",
         "box_tag": "{{user `cloud_tag`}}",
         "access_token": "{{user `cloud_token`}}",
-        "version": "{{user `cloud_version`}}"
+        "version": "{{user `cloud_version`}}",
+        "version_description": "{{user `cloud_version_description`}}",
+        "no_release": "{{user `cloud_no_release`}}"
       }
     ]
   ]
