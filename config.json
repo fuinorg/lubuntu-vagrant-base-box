@@ -5,9 +5,12 @@
     "iso_name": "lubuntu-17.10.1-alternate-amd64.iso",
     "iso_checksum": "c682b611cd13e7d2fed5f8972892e395",
     "iso_checksum_type": "md5",
+    "box_version": "1710.1.20180108",                    
+    "cloud_tag": "fuin/lubuntu-17.10-alternate-amd64",
+    "cloud_version": "0.1.7",
+    "cloud_token": "",
     "ssh_name": "vagrant",
     "ssh_pass": "vagrant",
-    "box_version": "1710.1.20180108",                    
     "virtualbox_version": "5.1.6",
     "disk_size": "40960",
     "mem_size": "1024",
@@ -15,10 +18,7 @@
     "linux": "/install/vmlinuz",
     "initrd": "/install/initrd.gz",
     "preseed": "preseed.cfg",
-    "headless": "true",
-    "cloud_token": "",
-    "cloud_version": "0.1.7",
-    "cloud_tag": "fuin/lubuntu-17.10-alternate-amd64"
+    "headless": "true"
   },
   "builders": [
     {
