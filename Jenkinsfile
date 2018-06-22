@@ -12,6 +12,7 @@ pipeline {
                 sh "pip install --user packet-python"
                 sh "sudo /opt/jenkins/sbin/mount-webdav https://repository-fuin-org.forge.cloudbees.com/private fuin-org alert"
                 sh "ansible --version"
+                sh "rm -r vagrant-packet-builder"
                 sh "git clone https://github.com/fuinorg/vagrant-packet-builder.git"
             }
         }
