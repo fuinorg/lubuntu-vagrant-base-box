@@ -6,7 +6,6 @@ Packer script that creates a Lubuntu alternate Vagrant base box.
 ## Current versions
 | Build | Branch | Status |
 | :---- | :----- | :----- |
-| [![Build Status 18.04-alternate-amd64](https://fuin-org.ci.cloudbees.com/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/badge/icon)](https://fuin-org.ci.cloudbees.com/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/) | [Lubuntu 18.04 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/) \[**master**\] | ![Warning](https://raw.githubusercontent.com/fuinorg/lubuntu-vagrant-base-box/master/warning.gif) In Progress |
 | [![Build Status 17.10.1-alternate-amd64](https://fuin-org.ci.cloudbees.com/job/lubuntu-vagrant-base-box-17.10.1-alternate-amd64/badge/icon)](https://fuin-org.ci.cloudbees.com/job/lubuntu-vagrant-base-box-17.10.1-alternate-amd64/) | [Lubuntu 17.10.1 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/tree/lubuntu-17.10.1-alternate-amd64) | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-17.10-alternate-amd64/) | 
 
 # Download
