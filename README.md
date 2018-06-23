@@ -11,7 +11,7 @@ Packer script that creates a Lubuntu alternate Vagrant base box.
 
 # Download
 You can download the pre-built base boxes here:
-https://app.vagrantup.com/fuin/boxes/lubuntu-17.10-alternate-amd64/
+https://app.vagrantup.com/fuin/boxes/lubuntu-18.04-alternate-amd64/
 
 # Build
 You can easily build the base box on your local PC (bare metal).
