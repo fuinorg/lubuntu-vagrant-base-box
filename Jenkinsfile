@@ -8,8 +8,6 @@ pipeline {
     stages {
         stage('Setup Build') { 
             steps {
-                sh "pip install --upgrade --user ansible"
-                sh "pip install --user packet-python"
                 sh "ansible --version"
                 sh "if [ -d vagrant-packet-builder ]; then rm -Rf vagrant-packet-builder; fi"
                 sh "git clone https://github.com/fuinorg/vagrant-packet-builder.git"
