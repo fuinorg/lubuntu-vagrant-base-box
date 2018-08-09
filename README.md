@@ -6,8 +6,8 @@ Packer script that creates a Lubuntu alternate Vagrant base box.
 ## Current versions
 | Build | Branch | Status |
 | :---- | :----- | :----- |
-| [![Build Status 18.04-alternate-amd64](https://fuin-org.ci.cloudbees.com/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/badge/icon)](https://fuin-org.ci.cloudbees.com/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/) | [Lubuntu 18.04 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/) \[**master**\] | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-18.04-alternate-amd64/) |
-| [![Build Status 17.10.1-alternate-amd64](https://fuin-org.ci.cloudbees.com/job/lubuntu-vagrant-base-box-17.10.1-alternate-amd64/badge/icon)](https://fuin-org.ci.cloudbees.com/job/lubuntu-vagrant-base-box-17.10.1-alternate-amd64/) | [Lubuntu 17.10.1 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/tree/lubuntu-17.10.1-alternate-amd64) | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-17.10-alternate-amd64/) | 
+| [![Build Status 18.04-alternate-amd64](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/badge/icon)](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/) | [Lubuntu 18.04 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/) \[**master**\] | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-18.04-alternate-amd64/) |
+| [![Build Status 17.10.1-alternate-amd64](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-17.10.1-alternate-amd64/badge/icon)](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-17.10.1-alternate-amd64/) | [Lubuntu 17.10.1 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/tree/lubuntu-17.10.1-alternate-amd64) | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-17.10-alternate-amd64/) | 
 
 # Download
 You can download the pre-built base boxes here:
