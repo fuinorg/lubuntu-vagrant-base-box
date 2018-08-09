@@ -10,7 +10,6 @@ pipeline {
             steps {
                 sh "pip install --upgrade --user ansible"
                 sh "pip install --user packet-python"
-                sh "sudo /opt/jenkins/sbin/mount-webdav https://repository-fuin-org.forge.cloudbees.com/private fuin-org alert"
                 sh "ansible --version"
                 sh "if [ -d vagrant-packet-builder ]; then rm -Rf vagrant-packet-builder; fi"
                 sh "git clone https://github.com/fuinorg/vagrant-packet-builder.git"
