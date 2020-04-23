@@ -6,12 +6,12 @@ Packer script that creates a Lubuntu alternate Vagrant base box.
 ## Current versions
 | Build | Branch | Status |
 | :---- | :----- | :----- |
-| [![Build Status 18.04-alternate-amd64](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/badge/icon)](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/) | [Lubuntu 18.04 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/) \[**master**\] | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-18.04-alternate-amd64/) |
-| [![Build Status 17.10.1-alternate-amd64](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-17.10.1-alternate-amd64/badge/icon)](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-17.10.1-alternate-amd64/) | [Lubuntu 17.10.1 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/tree/lubuntu-17.10.1-alternate-amd64) | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-17.10-alternate-amd64/) | 
+| [![Build Status 20.04-alternate-amd64](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-20.04-alternate-amd64/badge/icon)](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-20.04-alternate-amd64/) | [Lubuntu 20.04 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/) \[**master**\] | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-20.04-alternate-amd64/) |
+| [![Build Status 18.04-alternate-amd64](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/badge/icon)](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/) | [Lubuntu 18.04 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/tree/lubuntu-18.04-alternate-amd64) | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-18.04-alternate-amd64/) | 
 
 # Download
 You can download the pre-built base boxes here:
-https://app.vagrantup.com/fuin/boxes/lubuntu-18.04-alternate-amd64/
+https://app.vagrantup.com/fuin/boxes/lubuntu-20.04-alternate-amd64/
 
 # Build
 You can easily build the base box on your local PC (bare metal).
@@ -35,7 +35,7 @@ To build a virtualbox base box:
 packer build \
    -var 'cloud_token=XXXXXXXXXXXXXXXXX' \
    -var 'cloud_version=0.1.2' \
-   -var 'cloud_tag=youraccount/lubuntu-18.04-alternate-amd64' \
+   -var 'cloud_tag=youraccount/lubuntu-20.04-alternate-amd64' \
    -only virtualbox-build
    config.json
 ```
@@ -45,7 +45,7 @@ To build a vmware base box:
 packer build \
    -var 'cloud_token=XXXXXXXXXXXXXXXXX' \
    -var 'cloud_version=0.1.2' \
-   -var 'cloud_tag=youraccount/lubuntu-18.04-alternate-amd64' \
+   -var 'cloud_tag=youraccount/lubuntu-20.04-alternate-amd64' \
    -only vmware-build
    config.json
 ```
