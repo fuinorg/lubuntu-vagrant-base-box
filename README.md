@@ -3,6 +3,9 @@ Packer script that creates a Lubuntu alternate Vagrant base box.
 
 [![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
+## Status
+![Warning](https://raw.githubusercontent.com/fuinorg/lubuntu-vagrant-base-box/master/warning.gif) **Lubuntu 20.04 is not yet finished as the "Alternate" ISO image is not available until now** ![Warning](https://raw.githubusercontent.com/fuinorg/lubuntu-vagrant-base-box/master/warning.gif)
+
 ## Current versions
 | Build | Branch | Status |
 | :---- | :----- | :----- |
