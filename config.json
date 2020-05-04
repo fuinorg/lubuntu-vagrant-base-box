@@ -71,7 +71,7 @@
       "iso_checksum": "{{user `iso_checksum`}}",
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_urls": [
-        "http://cdimages.ubuntu.com/lubuntu/releases/{{user `release`}}/release/{{user `iso_name`}}"
+        "http://archive.ubuntu.com/ubuntu/dists/{{user `release`}}/main/installer-amd64/current/legacy-images/netboot/{{user `iso_name`}}"
       ],
       "disk_type_id": "0",
       "ssh_username": "{{user `ssh_name`}}",
