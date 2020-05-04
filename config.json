@@ -1,12 +1,12 @@
 {
   "variables": {
     "release": "focal",
-    "vm_name": "Lubuntu-20.04-amd64-core",
-    "iso_name": "lubuntu-20.04-alternate-amd64.iso",
-    "iso_checksum": "xxxx",
+    "vm_name": "lubuntu-20.04-core-amd64",
+    "iso_name": "mini.iso",
+    "iso_checksum": "e5bf713621b43207dead707396da29f6",
     "iso_checksum_type": "md5",
     "box_version": "2004.0.20200423",                    
-    "cloud_tag": "fuin/lubuntu-20.04-alternate-amd64",
+    "cloud_tag": "fuin/lubuntu-20.04-core-amd64",
     "cloud_version": "20.4.0-0",
     "cloud_token": "",
     "cloud_version_description": "New LTS version",
@@ -17,8 +17,6 @@
     "disk_size": "40960",
     "mem_size": "1024",
     "num_cpus": "2",
-    "linux": "/install/vmlinuz",
-    "initrd": "/install/initrd.gz",
     "preseed": "preseed.cfg",
     "headless": "true"
   },
@@ -36,7 +34,7 @@
       "iso_checksum": "{{user `iso_checksum`}}",
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_urls": [
-        "http://cdimages.ubuntu.com/lubuntu/releases/{{user `release`}}/release/{{user `iso_name`}}"
+        "http://archive.ubuntu.com/ubuntu/dists/{{user `release`}}/main/installer-amd64/current/legacy-images/netboot/{{user `iso_name`}}"
       ],
       "vboxmanage": [
         [ "modifyvm", "{{.Name}}", "--rtcuseutc", "on" ],
@@ -48,25 +46,16 @@
       "ssh_password": "{{user `ssh_pass`}}",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
-      "floppy_files": [
-        "files/{{user `preseed`}}"
-      ],
+      "http_directory": "files/",
       "boot_command": [
-        "<esc><f6><esc>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs>",
-        "{{user `linux`}} noapic preseed/file=/media/{{user `preseed`}} ",
-        "debian-installer=en_US auto=true country=US language=EN locale=en_US kbd-chooser/method=us ",
-        "console-setup/ask_detect=false keyboard-configuration/layoutcode=us ",
+        "<tab>",
+        "auto=true ",
+        "net.ifnames=0 ",
         "hostname=vagrant ",
-        "initrd={{user `initrd`}} quiet --- <enter>"
+        "debian-installer=en_US country=US language=EN locale=en_US kbd-chooser/method=us ",
+        "console-setup/ask_detect=false keyboard-configuration/layoutcode=us ",
+        "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/{{ user `preseed` }} ",
+        "<enter>"
       ],
       "shutdown_command": "echo {{user `ssh_pass`}} | sudo -S shutdown -P now",
       "output_directory": "output/{{user `vm_name`}}-v{{user `box_version`}}-{{timestamp}}"
@@ -89,25 +78,16 @@
       "ssh_password": "{{user `ssh_pass`}}",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
-      "floppy_files": [
-        "files/{{user `preseed`}}"
-      ],
+      "http_directory": "files/",
       "boot_command": [
-        "<enter><wait><f6><esc>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs>",
-        "{{user `linux`}} noapic preseed/file=/media/{{user `preseed`}} ",
-        "debian-installer=en_US auto=true country=US language=EN locale=en_US kbd-chooser/method=us ",
-        "console-setup/ask_detect=false keyboard-configuration/layoutcode=us ",
+        "<tab>",
+        "auto=true ",
+        "net.ifnames=0 ",
         "hostname=vagrant ",
-        "initrd={{user `initrd`}} quiet --- <enter>"
+        "debian-installer=en_US country=US language=EN locale=en_US kbd-chooser/method=us ",
+        "console-setup/ask_detect=false keyboard-configuration/layoutcode=us ",
+        "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/{{ user `preseed` }} ",
+        "<enter>"
       ],
       "shutdown_command": "echo {{user `ssh_pass`}} | sudo -S shutdown -P now",
       "output_directory": "output/{{user `vm_name`}}-v{{user `box_version`}}-{{timestamp}}"
