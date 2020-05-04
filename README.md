@@ -1,5 +1,5 @@
 # lubuntu-vagrant-base-box
-Packer script that creates a Lubuntu alternate Vagrant base box.
+Packer script that creates a Lubuntu Mini Vagrant base box.
 
 [![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
@@ -11,7 +11,7 @@ Packer script that creates a Lubuntu alternate Vagrant base box.
 
 # Download
 You can download the pre-built base boxes here:
-https://app.vagrantup.com/fuin/boxes/lubuntu-20.04-alternate-amd64/
+https://app.vagrantup.com/fuin/boxes/lubuntu-20.04-mini-amd64/
 
 # Build
 You can easily build the base box on your local PC (bare metal).
