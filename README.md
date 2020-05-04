@@ -3,13 +3,10 @@ Packer script that creates a Lubuntu alternate Vagrant base box.
 
 [![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-## Status
-![Warning](https://raw.githubusercontent.com/fuinorg/lubuntu-vagrant-base-box/master/warning.gif) **Lubuntu 20.04 is not yet finished as the "Alternate" ISO image is not available until now** ![Warning](https://raw.githubusercontent.com/fuinorg/lubuntu-vagrant-base-box/master/warning.gif)
-
 ## Current versions
 | Build | Branch | Status |
 | :---- | :----- | :----- |
-| [![Build Status 20.04-alternate-amd64](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-20.04-alternate-amd64/badge/icon)](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-20.04-alternate-amd64/) | [Lubuntu 20.04 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/) \[**master**\] | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-20.04-alternate-amd64/) |
+| [![Build Status 20.04-mini-amd64](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-20.04-alternate-amd64/badge/icon)](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-20.04-alternate-amd64/) | [Lubuntu 20.04 Mini AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/) \[**master**\] | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-20.04-alternate-amd64/) |
 | [![Build Status 18.04-alternate-amd64](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/badge/icon)](https://jenkins.fuin.org/job/lubuntu-vagrant-base-box-18.04-alternate-amd64/) | [Lubuntu 18.04 Alternate AMD64](https://github.com/fuinorg/lubuntu-vagrant-base-box/tree/lubuntu-18.04-alternate-amd64) | Available for [download](https://app.vagrantup.com/fuin/boxes/lubuntu-18.04-alternate-amd64/) | 
 
 # Download
