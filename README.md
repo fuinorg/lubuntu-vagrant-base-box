@@ -3,6 +3,9 @@ Packer script that creates a Lubuntu Mini Vagrant base box.
 
 [![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
+## Status
+![Warning](https://raw.githubusercontent.com/fuinorg/lubuntu-developer-vm/master/warning.gif) **NO LONGER MAINTAINED** ![Warning](https://raw.githubusercontent.com/fuinorg/lubuntu-developer-vm/master/warning.gif)
+
 ## Current versions
 | Build | Branch | Status |
 | :---- | :----- | :----- |
